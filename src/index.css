@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 50% 8%;
+    --foreground: 0 0% 98%;
+    --card: 216 45% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 216 45% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 43 74% 52%;
+    --primary-foreground: 216 50% 8%;
+    --secondary: 210 52% 24%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 216 35% 18%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 43 74% 52%;
+    --accent-foreground: 216 50% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 216 35% 20%;
+    --input: 216 35% 20%;
+    --ring: 43 74% 52%;
+    --radius: 0.75rem;
+    
+    --pars-blue: #0A1628;
+    --pars-blue-light: #1E3A5F;
+    --pars-gold: #D4AF37;
+    --pars-gold-light: #F4D03F;
+    --pars-green: #10B981;
+    --pars-blue-bright: #3B82F6;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--pars-gold) 0%, var(--pars-gold-light) 50%, var(--pars-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, var(--pars-blue) 0%, var(--pars-blue-light) 50%, var(--pars-blue) 100%);
+  }
+  
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, var(--pars-gold) 0%, var(--pars-gold-light) 50%, var(--pars-gold) 100%);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(16px);
+    background: rgba(30, 58, 95, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  .shadow-gold {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+  }
+  
+  .shadow-gold-sm {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-gold {
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-gradient-shift {
+    animation: gradientShift 8s ease infinite;
+    background-size: 200% 200%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pars-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pars-blue-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pars-gold);
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: white;
+}
