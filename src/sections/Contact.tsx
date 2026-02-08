@@ -9,12 +9,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'آدرس',
-    content: 'تهران، خیابان ولیعصر، برج پارس، طبقه ۱۵',
+    content: 'تهران، خیابان اشرفی اصفهانی، پارک علم و فناوری',
   },
   {
     icon: Phone,
     title: 'تلفن',
-    content: '۰۲۱-۸۸۷۷۶۶۵۵',
+    content: '۰۲۱-۲۲۰۳۷۵۵۰',
   },
   {
     icon: Mail,
@@ -130,7 +130,7 @@ export default function Contact() {
               <div className="aspect-video rounded-xl bg-gradient-to-br from-[#1E3A5F]/50 to-[#0A1628] flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-[#D4AF37] mx-auto mb-3" />
-                  <span className="text-gray-400 text-sm">تهران، خیابان ولیعصر</span>
+                  <span className="text-gray-400 text-sm">تهران، خیابان اشرفی اصفهانی</span>
                 </div>
               </div>
             </div>

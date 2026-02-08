@@ -156,11 +156,11 @@ export default function Hero() {
             {/* Stats Preview */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#D4AF37]">۲M+</div>
+                <div className="text-2xl font-bold text-[#D4AF37]">۱۹</div>
                 <div className="text-sm text-gray-500">کاربر فعال</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#D4AF37]">۵۰۰K+</div>
+                <div className="text-2xl font-bold text-[#D4AF37]">۱۵K+</div>
                 <div className="text-sm text-gray-500">تراکنش روزانه</div>
               </div>
               <div className="text-center">
